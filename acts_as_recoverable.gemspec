@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ["Revolution Health"]
   s.autorequire = %q{acts_as_recoverable}
   s.date = %q{2000-01-12}
-  s.description = %q{}
+  s.description = %q{A plugin for ActiveRecord that allows for easy recovery of deleted models.}
   s.email = %q{rails@revolutionhealth.com}
   s.extra_rdoc_files = ["README.rdoc"]
   s.files = ["MIT-LICENSE","README.rdoc", "Rakefile","init.rb","install.rb","uninstall.rb","generators/recoverable_objects_migration/templates/migration.rb","generators/recoverable_objects_migration/recoverable_objects_migration_generator.rb","generators/recoverable_objects_migration/USAGE",
@@ -17,6 +17,6 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
-  s.summary = %q{}
+  s.summary = %q{A plugin for ActiveRecord that allows for easy recovery of deleted models.}
   s.add_dependency("activerecord", "~> 2.0") 
 end
