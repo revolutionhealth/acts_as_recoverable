@@ -1,2 +1,5 @@
+.project
+pkg
+test/db/*
 test/log/*
 *.sqlite3.db

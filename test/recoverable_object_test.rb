@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), 'test_helper')
 class RecoverableObjectTest < Test::Unit::TestCase
 
   def teardown
-    [Article, Comment, Publication, RecoverableObject, Rating, Comment, Listing, Location].each do |klass| 
+    [Tag, Article, Comment, RecoverableObject, Rating, Comment, Listing, Location].each do |klass| 
       klass.all.each { |a| a.destroy }
     end
   end

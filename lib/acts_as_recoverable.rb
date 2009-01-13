@@ -9,11 +9,12 @@ module Patch
         
         include InstanceMethods
       end
-      
+
       module InstanceMethods
         def self.included(base)
           base.class_eval do
             before_destroy :create_recoverable_object_for
+            extend Patch::Acts::Recoverable::SingletonMethods
           end
         end
 
@@ -26,6 +27,18 @@ module Patch
           destroy
         end
       end
+
+      module SingletonMethods
+        def find_and_recover(id)
+          ro = RecoverableObject.find(:first, :conditions => ["recoverable_id = ? and recoverable_type = ?", id, self.to_s])
+          if ro
+            ro.recover! 
+          else
+            raise ActiveRecord::ActiveRecordError.new("Could not find recoverable with recoverable_id = #{id} and recoverable_type = #{self.to_s}")
+          end
+        end
+      end
+
     end
   end
 end

@@ -1,12 +1,20 @@
-class Publication < ActiveRecord::Base
-  has_many :articles, :dependent => :destroy
-end
-
 class Article < ActiveRecord::Base
   acts_as_recoverable
   
   has_many :comments, :dependent => :destroy
   has_many :authors
+  has_many :tags, :dependent => :destroy
+end
+
+class HealthArticle < Article
+end
+
+class TechnicalArticle < Article
+end
+
+class Tag < ActiveRecord::Base
+  acts_as_recoverable
+  belongs_to :article
 end
 
 class Author < ActiveRecord::Base
@@ -31,3 +39,4 @@ end
 class Location < ActiveRecord::Base
   has_and_belongs_to_many :listings
 end
+

@@ -14,6 +14,9 @@ class RecoverableObject < ActiveRecord::Base
   
   def object=(object)
     self.object_hash = get_object_hash(object)    
+    self.recoverable_id = object.id
+    self.recoverable_type = object.class.name
+    self.deleted_at = Time.now
   end
   
   private

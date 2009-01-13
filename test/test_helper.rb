@@ -9,7 +9,8 @@ require 'active_record/fixtures'
 
 require File.join(File.dirname(__FILE__), '..', 'init')
 
-ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :dbfile => ":memory:")
+#FileUtils.rm(File.join(File.dirname(__FILE__), 'db', "./test.db"))
+ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :dbfile => File.join(File.dirname(__FILE__), 'db', "./test.db"))
 
 ActiveRecord::Base.logger = Logger.new File.join(File.dirname(__FILE__), 'log', 'test.log')
 
