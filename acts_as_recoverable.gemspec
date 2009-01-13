@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{acts_as_recoverable}
-  s.version = "0.0.1"
+  s.version = "1.0.2"
  
   s.specification_version = 1 if s.respond_to? :specification_version=
  
