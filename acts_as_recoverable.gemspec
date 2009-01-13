@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
   s.homepage = %q{http://}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.0.1}
+  s.rubygems_version = %q{1.3.1}
   s.summary = %q{}
   s.add_dependency("activerecord", "~> 2.0") 
 end
