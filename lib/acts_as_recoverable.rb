@@ -1,5 +1,3 @@
-require 'ruby-debug'
-
 module Patch
   module Acts
     module Recoverable
