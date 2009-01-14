@@ -1,3 +1,5 @@
+.loadpath
+.specification
 .project
 pkg
 test/db/*

@@ -42,3 +42,5 @@ module Patch
     end
   end
 end
+
+ActiveRecord::Base.send(:extend, Patch::Acts::Recoverable)
